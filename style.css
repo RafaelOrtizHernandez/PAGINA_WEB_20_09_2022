@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+body
+{
+    width: 100vw;
+    max-width: 100%;
+    background-color: #44424a;
+    overflow: hidden;
+}
+
+header
+{
+    position: relative;
+    height: 4rem;
+    width: 100vw;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111;
+}
+
+header .logo
+{
+    display: flex;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+
+header .bars
+{
+    margin-right: 10px;
+    position: relative;
+    height: 3px;
+    width: 20px;
+    border-radius: 2px;
+    background-color: #888888;
+    display: none;
+}
+
+header .bars::after,
+header .bars::before
+{
+    position: absolute;
+    content: '';
+    left: 0;
+    height: 3px;
+    width: 20px;
+    border-radius: 2px;
+    background: #888888;
+}
+
+header .bars::after
+{
+    bottom: 7px;
+}
+
+header .bars::before
+{
+    top: 7px;
+}
+
+header h2
+{
+    color: #d6d6d6;
+    font-size: 1.2rem;
+
+}
+
+.nav__links
+{
+    display: flex;
+}
+
+.nav__links li
+{
+    position: relative;
+    padding: 0.7vw;
+    margin: 0 0.7vw;
+}
+
+.nav__links li a
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #888888;
+}
+
+.nav__links li a span
+{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-top: 0.2rem;
+}
+
+section
+{
+    display: flex;
+    align-items: center;
+}
+
+section span
+{
+    color: #888888;
+}
+
+section span i
+{
+    margin: 0 0.2vw;
+    font-size: 1.2rem;
+}
+
+section img
+{
+    margin: 0 0.7vw;
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+@media only screen and (max-width : 768px) 
+{
+    header .logo
+    {
+        margin-right: 50px;
+    }
+    header .bars
+    {
+        display: block;
+        transition: 0.5s;
+    }
+    nav
+    {
+        position: fixed;
+        z-index: 3;
+    }
+    .nav__links
+    {
+        background: #111111;
+        position: fixed;
+        top: 4rem;
+        left: 0;
+        padding-top: 1rem;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        pointer-events: none;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav__links li 
+    {
+        margin: 1.2vw 0;
+    }
+    .nav__links.open
+    {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+}
