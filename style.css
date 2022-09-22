@@ -18,7 +18,7 @@ body
 {
     width: 100vw;
     max-width: 100%;
-    background-color: #44424a;
+    background-color: #4c927c;
     overflow: hidden;
 }
 
@@ -31,7 +31,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #111111;
+    background-color: #f4f5e7;
 }
 
 header .logo
@@ -48,7 +48,7 @@ header .bars
     height: 3px;
     width: 20px;
     border-radius: 2px;
-    background-color: #888888;
+    background-color: #4c927c;
     display: none;
 }
 
@@ -61,7 +61,7 @@ header .bars::before
     height: 3px;
     width: 20px;
     border-radius: 2px;
-    background: #888888;
+    background: #424141;
 }
 
 header .bars::after
@@ -76,9 +76,21 @@ header .bars::before
 
 header h2
 {
-    color: #d6d6d6;
+    color: #424141;
     font-size: 1.2rem;
 
+}
+
+.search 
+{
+    padding: 0.7vw;
+    margin: 0 0.7vw;
+}
+
+.bell 
+{
+    padding: 0.7vw;
+    margin: 0 0.7vw;
 }
 
 .nav__links
@@ -98,7 +110,7 @@ header h2
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #888888;
+    color: #424141;
 }
 
 .nav__links li a span
@@ -116,7 +128,7 @@ section
 
 section span
 {
-    color: #888888;
+    color: #424141;
 }
 
 section span i
@@ -128,8 +140,8 @@ section span i
 section img
 {
     margin: 0 0.7vw;
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     object-fit: cover;
     border-radius: 50%;
 
@@ -146,6 +158,14 @@ section img
         display: block;
         transition: 0.5s;
     }
+    header .bars.is-active
+    {
+        transform: rotate(90deg);
+        width: 35px;
+        transform-origin: right;
+        transform: translateY(15px) rotate(45deg);
+    }
+
     nav
     {
         position: fixed;
@@ -153,7 +173,7 @@ section img
     }
     .nav__links
     {
-        background: #111111;
+        background: #4c927c;
         position: fixed;
         top: 4rem;
         left: 0;
